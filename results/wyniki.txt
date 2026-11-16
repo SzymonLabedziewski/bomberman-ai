@@ -1,0 +1,137 @@
+(.venv) labedziewski@DESKTOP-KDJ0KNP:/mnt/c/Users/DELL/Documents/Bomberman$ bash docs/run_full_benchmark.sh
+[2026-10-28 20:04:39] ========================================================================
+[2026-10-28 20:04:39]  START PEŁNEGO BENCHMARKU BOMBERMAN AI (Linux / WSL)
+[2026-10-28 20:04:39]  Procesy robocze (workers): 4 (z 4 dostępnych rdzeni)
+[2026-10-28 20:04:39]  Skala eksperymentów:       1.0 (1.0 = po 500+500 = 1000 gier/parę)
+[2026-10-28 20:04:39] ========================================================================
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Model name:                              Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+NUMA node0 CPU(s):                       0-3
+               total        used        free      shared  buff/cache   available
+Mem:           899Mi       398Mi       421Mi       2.1Mi       153Mi       500Mi
+Swap:          2.0Gi       184Mi       1.8Gi
+[2026-10-28 20:04:39] ------------------------------------------------------------------------
+[2026-10-28 20:04:39]  ETAP 1/3: Trening modeli Q-Learning (AI) na 4 procesach
+[2026-10-28 20:04:39] ------------------------------------------------------------------------
+[2026-10-28 20:04:39]  -> Trening modelu bez fizyki (q_pure.json, 15000 epizodów vs MonteCarlo + self-play)...
+Trening Q-learning: 15000 epizodów, workers=4, opponent=montecarlo, physics=False, out=bomberman/ai/models/q_pure.json
+^@Gotowe: stany=2461, czas=1301.36 s, peak RSS=18.87 MB, bomby=156396, kopnięcia=0
+  koszt: cpu~5205.45 s-rdzeni, energia~21.6894 Wh (P=15.0 W), pure_policy=True
+  eval vs RandomSafe: WR=0.8 draw=0.2 bomb_rate=1.0 kicks/g=0.0 self-kill=0.0
+  eval vs Planner:    WR=0.0 draw=0.9875 loss=0.0125 bomb_rate=1.0 kicks/g=0.0 self-kill=0.0125
+  eval vs MonteCarlo: WR=0.1375 draw=0.725 loss=0.1375 bomb_rate=1.0 kicks/g=0.0 self-kill=0.15
+  (eval = czysta Q, bez BFS; WR vs RandomSafe myli przy bomb_rate~0 - docs/qlearning.md)
+Tablica: bomberman/ai/models/q_pure.json
+Meta treningu: bomberman/ai/models/q_pure.train.meta.json
+Ledger kosztów: results/ai_cost_ledger.json
+[2026-10-28 20:28:33]  -> Trening modelu z fizyką: kopanie + odrzut, bez przeszkód (q_pure_physics.json, 20000 epizodów)...
+Trening Q-learning: 20000 epizodów, workers=4, opponent=montecarlo, physics={'kick': True, 'knockback': True, 'moving_obstacles': False}, out=bomberman/ai/models/q_pure_physics.json
+Gotowe: stany=11753, czas=2417.7 s, peak RSS=23.29 MB, bomby=175087, kopnięcia=71814
+  koszt: cpu~9670.8 s-rdzeni, energia~40.295 Wh (P=15.0 W), pure_policy=True
+  eval vs RandomSafe: WR=0.8125 draw=0.1625 bomb_rate=1.0 kicks/g=3.4625 self-kill=0.025
+  eval vs Planner:    WR=0.05 draw=0.825 loss=0.125 bomb_rate=1.0 kicks/g=8.125 self-kill=0.0875
+  eval vs MonteCarlo: WR=0.2375 draw=0.5375 loss=0.225 bomb_rate=1.0 kicks/g=5.6375 self-kill=0.125
+  (eval = czysta Q, bez BFS; WR vs RandomSafe myli przy bomb_rate~0 - docs/qlearning.md)
+Tablica: bomberman/ai/models/q_pure_physics.json
+Meta treningu: bomberman/ai/models/q_pure_physics.train.meta.json
+Ledger kosztów: results/ai_cost_ledger.json
+[2026-10-28 21:11:57]  Etap 1 zakończony w 4038 s.
+[2026-10-28 21:11:57] ------------------------------------------------------------------------
+[2026-10-28 21:11:57]  ETAP 2/3: Czyszczenie starych plików wynikowych i uruchamianie turniejów
+[2026-10-28 21:11:57] ------------------------------------------------------------------------
+[2026-10-28 21:11:57]  -> Uruchamianie configs/experiments/E1.json (workers=4, scale=1.0)...
+[E1] Turniej każdy z każdym (5 botów, 500 gier/parę), fizyka wyłączona, limit 1000 ticków: 5000 zadań, procesy: 4
+^C
+
+---
+
+(.venv) labedziewski@DESKTOP-KDJ0KNP:/mnt/c/Users/DELL/Documents/Bomberman$ bash docs/run_full_benchmark.sh --skip-train
+[2026-10-28 21:38:01] ========================================================================
+[2026-10-28 21:38:01]  START PEŁNEGO BENCHMARKU BOMBERMAN AI (Linux / WSL)
+[2026-10-28 21:38:01]  Procesy robocze (workers): 4 (z 4 dostępnych rdzeni)
+[2026-10-28 21:38:01]  Skala eksperymentów:       1.0 (1.0 = pełne E1/E2 z configs, zwykle ~200 gier/parę)
+[2026-10-28 21:38:01] ========================================================================
+CPU(s):                                  4
+On-line CPU(s) list:                     0-3
+Model name:                              Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      2
+NUMA node0 CPU(s):                       0-3
+               total        used        free      shared  buff/cache   available
+Mem:           899Mi       400Mi       436Mi       2.1Mi       135Mi       498Mi
+Swap:          2.0Gi       178Mi       1.8Gi
+[2026-10-28 21:38:01] ------------------------------------------------------------------------
+[2026-10-28 21:38:01]  ETAP 2/3: Czyszczenie starych plików wynikowych i uruchamianie turniejów
+[2026-10-28 21:38:01] ------------------------------------------------------------------------
+[2026-10-28 21:38:01]  -> Uruchamianie configs/experiments/E1.json (workers=4, scale=1.0)...
+[E1] Turniej każdy z każdym (5 botów, 200 gier/parę), fizyka wyłączona, limit 200 ticków: 1800 zadań, procesy: 4
+^@^@  180/1800  (244 s)
+  360/1800  (333 s)
+  540/1800  (454 s)
+  720/1800  (570 s)
+  900/1800  (578 s)
+  1080/1800  (580 s)
+  1260/1800  (583 s)
+  1440/1800  (590 s)
+  1620/1800  (600 s)
+  1800/1800  (601 s)
+[E1] zapisano results/E1.csv (601 s)
+[2026-10-28 21:48:17]  -> Zakończono configs/experiments/E1.json w 616 s.
+[2026-10-28 21:48:17]  -> Uruchamianie configs/experiments/E2.json (workers=4, scale=1.0)...
+[E2] Turniej każdy z każdym (5 botów, 200 gier/parę), fizyka włączona (kopanie i odrzut, bez przeszkód), limit 200 ticków: 1740 zadań, procesy: 4
+  174/1740  (246 s)
+  348/1740  (293 s)
+  522/1740  (418 s)
+  696/1740  (516 s)
+  870/1740  (527 s)
+  1044/1740  (531 s)
+  1218/1740  (540 s)
+  1392/1740  (554 s)
+  1566/1740  (573 s)
+  1740/1740  (573 s)
+[E2] zapisano results/E2.csv (574 s)
+[2026-10-28 21:58:06]  -> Zakończono configs/experiments/E2.json w 589 s.
+[2026-10-28 21:58:06]  -> Uruchamianie configs/experiments/E4.json (workers=4, scale=1.0)...
+[E4] Monte Carlo przeciw Plannerowi: liczba symulacji K i głębokość D: 144 zadań, procesy: 4
+^@  14/144  (102 s)
+  28/144  (157 s)
+  42/144  (200 s)
+  56/144  (228 s)
+  70/144  (249 s)
+  84/144  (263 s)
+  98/144  (273 s)
+  112/144  (283 s)
+  126/144  (289 s)
+  140/144  (295 s)
+  144/144  (296 s)
+[E4] zapisano results/E4.csv (296 s)
+[2026-10-28 22:03:10]  -> Zakończono configs/experiments/E4.json w 304 s.
+[2026-10-28 22:03:10]  -> Uruchamianie configs/experiments/E5.json (workers=4, scale=1.0)...
+[E5] Skuteczność ucieczki w 500 losowych sytuacjach zagrożenia (5 botów): 1000 zadań, procesy: 4
+  100/1000  (7 s)
+  200/1000  (13 s)
+  300/1000  (19 s)
+  400/1000  (26 s)
+  500/1000  (32 s)
+  600/1000  (34 s)
+  700/1000  (36 s)
+  800/1000  (38 s)
+  900/1000  (40 s)
+  1000/1000  (42 s)
+[E5] zapisano results/E5.csv (42 s)
+[2026-10-28 22:03:53]  -> Zakończono configs/experiments/E5.json w 43 s.
+[2026-10-28 22:03:53] ------------------------------------------------------------------------
+[2026-10-28 22:03:53]  ETAP 3/3: Analiza statystyczna, wykresy PNG, tabele i analiza Break-Even
+[2026-10-28 22:03:53] ------------------------------------------------------------------------
+Analiza: 12 wykresów w results/plots, podsumowanie w results/summary.json
+[2026-10-28 22:04:13] ========================================================================
+[2026-10-28 22:04:13]  ZAKOŃCZONO CAŁY PROCES W 1572 s (26 min)
+[2026-10-28 22:04:13]  Wyniki CSV:          results/E1.csv, E2.csv, E4.csv, E5.csv
+[2026-10-28 22:04:13]  Tabele i zasoby:     results/tables.md
+[2026-10-28 22:04:13]  Podsumowanie Godot:  results/summary.json
+[2026-10-28 22:04:13]  Wykresy PNG:         results/plots/
+[2026-10-28 22:04:13]  Log przebiegu:       results/benchmark_run.log
+[2026-10-28 22:04:13] ========================================================================

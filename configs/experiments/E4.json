@@ -1,0 +1,20 @@
+{
+  "name": "E4",
+  "title": "Monte Carlo przeciw Plannerowi: liczba symulacji K i głębokość D",
+  "kind": "matches",
+  "games": 16,
+  "max_ticks": 200,
+  "seed": 40000,
+  "physics": false,
+  "matchups": [
+    {"variant": "K=10 D=4", "p1": {"name": "montecarlo", "label": "MC K=10 D=4", "params": {"rollouts": 10, "depth": 4}}, "p2": "planner"},
+    {"variant": "K=10 D=8", "p1": {"name": "montecarlo", "label": "MC K=10 D=8", "params": {"rollouts": 10, "depth": 8}}, "p2": "planner"},
+    {"variant": "K=10 D=12", "p1": {"name": "montecarlo", "label": "MC K=10 D=12", "params": {"rollouts": 10, "depth": 12}}, "p2": "planner"},
+    {"variant": "K=30 D=4", "p1": {"name": "montecarlo", "label": "MC K=30 D=4", "params": {"rollouts": 30, "depth": 4}}, "p2": "planner"},
+    {"variant": "K=30 D=8", "p1": {"name": "montecarlo", "label": "MC K=30 D=8", "params": {"rollouts": 30, "depth": 8}}, "p2": "planner"},
+    {"variant": "K=30 D=12", "p1": {"name": "montecarlo", "label": "MC K=30 D=12", "params": {"rollouts": 30, "depth": 12}}, "p2": "planner"},
+    {"variant": "K=100 D=4", "p1": {"name": "montecarlo", "label": "MC K=100 D=4", "params": {"rollouts": 100, "depth": 4}}, "p2": "planner"},
+    {"variant": "K=100 D=8", "p1": {"name": "montecarlo", "label": "MC K=100 D=8", "params": {"rollouts": 100, "depth": 8}}, "p2": "planner"},
+    {"variant": "K=100 D=12", "p1": {"name": "montecarlo", "label": "MC K=100 D=12", "params": {"rollouts": 100, "depth": 12}}, "p2": "planner"}
+  ]
+}

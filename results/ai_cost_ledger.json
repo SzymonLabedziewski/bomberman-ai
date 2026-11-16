@@ -1,0 +1,659 @@
+{
+  "assumed_cpu_watts": 15.0,
+  "note": "cpu_seconds_est = wall_seconds * workers; energy_wh_est = cpu_s/3600 * P_W. Historical 60k runs (hybrid eval) + future pure-policy trains append here.",
+  "runs": [
+    {
+      "table_path": "bomberman/ai/models/q_default.json",
+      "episodes": 60000,
+      "workers": 4,
+      "wall_seconds": 585.32,
+      "cpu_seconds_est": 2341.28,
+      "energy_wh_est": 9.7553,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 19.2,
+      "n_states": 2956,
+      "physics": false,
+      "opponent": "aggressive",
+      "pure_policy": false,
+      "safe_play_eval": true,
+      "resume": null,
+      "note": "historyczny bieg 2026-10-27; eval jeszcze z hybrydą",
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_physics.json",
+      "episodes": 60000,
+      "workers": 4,
+      "wall_seconds": 906.67,
+      "cpu_seconds_est": 3626.68,
+      "energy_wh_est": 15.1112,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 19.38,
+      "n_states": 3273,
+      "physics": true,
+      "opponent": "aggressive",
+      "pure_policy": false,
+      "safe_play_eval": true,
+      "resume": null,
+      "note": "historyczny bieg 2026-10-27; eval jeszcze z hybrydą",
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_default.json",
+      "episodes": 100000,
+      "workers": 4,
+      "wall_seconds": 736.27,
+      "cpu_seconds_est": 2945.08,
+      "energy_wh_est": 12.2712,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 20.25,
+      "n_states": 3154,
+      "physics": false,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": "bomberman/ai/models/q_default.json",
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.9625,
+          "draw_rate": 0.0,
+          "loss_rate": 0.0375,
+          "self_kill_rate": 0.025,
+          "bomb_rate": 0.2625
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.4875,
+          "loss_rate": 0.5125,
+          "self_kill_rate": 0.425,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_physics.json",
+      "episodes": 100000,
+      "workers": 4,
+      "wall_seconds": 1376.75,
+      "cpu_seconds_est": 5506.98,
+      "energy_wh_est": 22.9458,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 20.62,
+      "n_states": 3648,
+      "physics": true,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": "bomberman/ai/models/q_physics.json",
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.7125,
+          "draw_rate": 0.025,
+          "loss_rate": 0.2625,
+          "self_kill_rate": 0.2875,
+          "bomb_rate": 0.7625
+        },
+        "vs_planner": {
+          "win_rate": 0.025,
+          "draw_rate": 0.175,
+          "loss_rate": 0.8,
+          "self_kill_rate": 0.7375,
+          "bomb_rate": 0.975
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_default.json",
+      "episodes": 80000,
+      "workers": 4,
+      "wall_seconds": 595.5,
+      "cpu_seconds_est": 2382.01,
+      "energy_wh_est": 9.925,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 21.79,
+      "n_states": 6143,
+      "physics": false,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": "bomberman/ai/models/q_default.json",
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.875,
+          "draw_rate": 0.0125,
+          "loss_rate": 0.1125,
+          "self_kill_rate": 0.125,
+          "bomb_rate": 0.6375
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.4125,
+          "loss_rate": 0.5875,
+          "self_kill_rate": 0.5625,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_physics.json",
+      "episodes": 80000,
+      "workers": 4,
+      "wall_seconds": 1215.31,
+      "cpu_seconds_est": 4861.22,
+      "energy_wh_est": 20.2551,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 25.75,
+      "n_states": 18265,
+      "physics": true,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": "bomberman/ai/models/q_physics.json",
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.7125,
+          "draw_rate": 0.05,
+          "loss_rate": 0.2375,
+          "self_kill_rate": 0.25,
+          "bomb_rate": 0.95
+        },
+        "vs_planner": {
+          "win_rate": 0.0375,
+          "draw_rate": 0.0875,
+          "loss_rate": 0.875,
+          "self_kill_rate": 0.7625,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure.json",
+      "episodes": 100000,
+      "workers": 4,
+      "wall_seconds": 745.98,
+      "cpu_seconds_est": 2983.93,
+      "energy_wh_est": 12.433,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 19.26,
+      "n_states": 3025,
+      "physics": false,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.9125,
+          "draw_rate": 0.0,
+          "loss_rate": 0.0875,
+          "self_kill_rate": 0.0875,
+          "bomb_rate": 0.525
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.3,
+          "loss_rate": 0.7,
+          "self_kill_rate": 0.65,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 120000,
+      "workers": 4,
+      "wall_seconds": 1661.79,
+      "cpu_seconds_est": 6647.15,
+      "energy_wh_est": 27.6965,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 24.33,
+      "n_states": 16700,
+      "physics": true,
+      "opponent": "aggressive",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.7375,
+          "draw_rate": 0.0125,
+          "loss_rate": 0.25,
+          "self_kill_rate": 0.225,
+          "bomb_rate": 0.8875
+        },
+        "vs_planner": {
+          "win_rate": 0.1,
+          "draw_rate": 0.1,
+          "loss_rate": 0.8,
+          "self_kill_rate": 0.6375,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure.json",
+      "episodes": 1200,
+      "workers": 4,
+      "wall_seconds": 95.38,
+      "cpu_seconds_est": 381.51,
+      "energy_wh_est": 1.5896,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 18.62,
+      "n_states": 1723,
+      "physics": false,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.95,
+          "draw_rate": 0.05,
+          "loss_rate": 0.0,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.95,
+          "loss_rate": 0.05,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.05,
+          "draw_rate": 0.95,
+          "loss_rate": 0.0,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 1200,
+      "workers": 4,
+      "wall_seconds": 178.45,
+      "cpu_seconds_est": 713.79,
+      "energy_wh_est": 2.9741,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 19.85,
+      "n_states": 5547,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.6,
+          "draw_rate": 0.2,
+          "loss_rate": 0.2,
+          "self_kill_rate": 0.2,
+          "bomb_rate": 1.0
+        },
+        "vs_planner": {
+          "win_rate": 0.3,
+          "draw_rate": 0.2,
+          "loss_rate": 0.5,
+          "self_kill_rate": 0.45,
+          "bomb_rate": 1.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.2,
+          "draw_rate": 0.4,
+          "loss_rate": 0.4,
+          "self_kill_rate": 0.35,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 400,
+      "workers": 4,
+      "wall_seconds": 68.87,
+      "cpu_seconds_est": 275.48,
+      "energy_wh_est": 1.1478,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 23.45,
+      "n_states": 6743,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": "bomberman/ai/models/q_pure_physics.json",
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.6,
+          "draw_rate": 0.1,
+          "loss_rate": 0.3,
+          "self_kill_rate": 0.35,
+          "bomb_rate": 1.0
+        },
+        "vs_planner": {
+          "win_rate": 0.15,
+          "draw_rate": 0.3,
+          "loss_rate": 0.55,
+          "self_kill_rate": 0.4,
+          "bomb_rate": 1.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.15,
+          "draw_rate": 0.3,
+          "loss_rate": 0.55,
+          "self_kill_rate": 0.2,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure.json",
+      "episodes": 15000,
+      "workers": 4,
+      "wall_seconds": 1303.88,
+      "cpu_seconds_est": 5215.54,
+      "energy_wh_est": 21.7314,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 19.13,
+      "n_states": 2455,
+      "physics": false,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.7625,
+          "draw_rate": 0.225,
+          "loss_rate": 0.0125,
+          "self_kill_rate": 0.0125,
+          "bomb_rate": 1.0
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.9875,
+          "loss_rate": 0.0125,
+          "self_kill_rate": 0.0125,
+          "bomb_rate": 1.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.0875,
+          "draw_rate": 0.775,
+          "loss_rate": 0.1375,
+          "self_kill_rate": 0.1625,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 20000,
+      "workers": 4,
+      "wall_seconds": 3601.43,
+      "cpu_seconds_est": 14405.71,
+      "energy_wh_est": 60.0238,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 25.47,
+      "n_states": 17662,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.825,
+          "draw_rate": 0.125,
+          "loss_rate": 0.05,
+          "self_kill_rate": 0.075,
+          "bomb_rate": 1.0
+        },
+        "vs_planner": {
+          "win_rate": 0.2,
+          "draw_rate": 0.6,
+          "loss_rate": 0.2,
+          "self_kill_rate": 0.1,
+          "bomb_rate": 1.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.15,
+          "draw_rate": 0.5125,
+          "loss_rate": 0.3375,
+          "self_kill_rate": 0.2125,
+          "bomb_rate": 1.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure.json",
+      "episodes": 1500,
+      "workers": 4,
+      "wall_seconds": 122.61,
+      "cpu_seconds_est": 490.45,
+      "energy_wh_est": 2.0435,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 18.82,
+      "n_states": 1868,
+      "physics": false,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.875,
+          "draw_rate": 0.125,
+          "loss_rate": 0.0,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 1.0,
+          "loss_rate": 0.0,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.15,
+          "draw_rate": 0.775,
+          "loss_rate": 0.075,
+          "self_kill_rate": 0.05,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 2000,
+      "workers": 4,
+      "wall_seconds": 313.44,
+      "cpu_seconds_est": 1253.77,
+      "energy_wh_est": 5.224,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 21.04,
+      "n_states": 9206,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.825,
+          "draw_rate": 0.1,
+          "loss_rate": 0.075,
+          "self_kill_rate": 0.075,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 10.875
+        },
+        "vs_planner": {
+          "win_rate": 0.3,
+          "draw_rate": 0.275,
+          "loss_rate": 0.425,
+          "self_kill_rate": 0.275,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 13.425
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.275,
+          "draw_rate": 0.2,
+          "loss_rate": 0.525,
+          "self_kill_rate": 0.425,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 11.875
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 2000,
+      "workers": 4,
+      "wall_seconds": 341.77,
+      "cpu_seconds_est": 1367.08,
+      "energy_wh_est": 5.6962,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 20.95,
+      "n_states": 9183,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.75,
+          "draw_rate": 0.025,
+          "loss_rate": 0.225,
+          "self_kill_rate": 0.2,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 5.675
+        },
+        "vs_planner": {
+          "win_rate": 0.35,
+          "draw_rate": 0.5,
+          "loss_rate": 0.15,
+          "self_kill_rate": 0.1,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 10.775
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.2,
+          "draw_rate": 0.275,
+          "loss_rate": 0.525,
+          "self_kill_rate": 0.4,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 7.225
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure.json",
+      "episodes": 15000,
+      "workers": 4,
+      "wall_seconds": 1301.36,
+      "cpu_seconds_est": 5205.45,
+      "energy_wh_est": 21.6894,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 18.87,
+      "n_states": 2461,
+      "physics": false,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.8,
+          "draw_rate": 0.2,
+          "loss_rate": 0.0,
+          "self_kill_rate": 0.0,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        },
+        "vs_planner": {
+          "win_rate": 0.0,
+          "draw_rate": 0.9875,
+          "loss_rate": 0.0125,
+          "self_kill_rate": 0.0125,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.1375,
+          "draw_rate": 0.725,
+          "loss_rate": 0.1375,
+          "self_kill_rate": 0.15,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 0.0
+        }
+      },
+      "seed": 42
+    },
+    {
+      "table_path": "bomberman/ai/models/q_pure_physics.json",
+      "episodes": 20000,
+      "workers": 4,
+      "wall_seconds": 2417.7,
+      "cpu_seconds_est": 9670.8,
+      "energy_wh_est": 40.295,
+      "assumed_cpu_watts": 15.0,
+      "peak_rss_mb": 23.29,
+      "n_states": 11753,
+      "physics": true,
+      "opponent": "montecarlo",
+      "pure_policy": true,
+      "safe_play_eval": false,
+      "resume": null,
+      "final_eval": {
+        "vs_randomsafe": {
+          "win_rate": 0.8125,
+          "draw_rate": 0.1625,
+          "loss_rate": 0.025,
+          "self_kill_rate": 0.025,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 3.4625
+        },
+        "vs_planner": {
+          "win_rate": 0.05,
+          "draw_rate": 0.825,
+          "loss_rate": 0.125,
+          "self_kill_rate": 0.0875,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 8.125
+        },
+        "vs_montecarlo": {
+          "win_rate": 0.2375,
+          "draw_rate": 0.5375,
+          "loss_rate": 0.225,
+          "self_kill_rate": 0.125,
+          "bomb_rate": 1.0,
+          "kicks_per_game": 5.6375
+        }
+      },
+      "seed": 42
+    }
+  ],
+  "total_episodes": 778300,
+  "total_wall_seconds": 17568.48,
+  "total_cpu_seconds_est": 70273.91,
+  "total_energy_wh_est": 292.8079
+}

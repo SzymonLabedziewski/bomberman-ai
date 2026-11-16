@@ -1,0 +1,44 @@
+{
+  "name": "E5",
+  "title": "Skuteczność ucieczki w 500 losowych sytuacjach zagrożenia (4 warianty środowiska, 5 botów)",
+  "kind": "escape",
+  "scenarios": 500,
+  "seed": 50000,
+  "variants": [
+    {
+      "variant": "bez fizyki",
+      "physics": false
+    },
+    {
+      "variant": "bez fizyki + przeszkody",
+      "physics": {
+        "kick": false,
+        "knockback": false,
+        "moving_obstacles": true
+      }
+    },
+    {
+      "variant": "z fizyką",
+      "physics": {
+        "kick": true,
+        "knockback": true,
+        "moving_obstacles": false
+      }
+    },
+    {
+      "variant": "z fizyką + przeszkody",
+      "physics": {
+        "kick": true,
+        "knockback": true,
+        "moving_obstacles": true
+      }
+    }
+  ],
+  "bots": [
+    "random",
+    "randomsafe",
+    "planner",
+    {"name": "montecarlo", "params": {"rollouts": 30, "depth": 8}},
+    "qlearner"
+  ]
+}

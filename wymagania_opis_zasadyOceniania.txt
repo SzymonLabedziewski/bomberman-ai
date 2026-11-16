@@ -1,0 +1,10 @@
+Uwaga: Opisane sposoby realizacji są propozycjami, a nie obligatoryjną drogą rozwiązania. Zespół może zastosować inne algorytmy, narzędzia i mechaniki, jeżeli potrafi uzasadnić ich wybór. W każdym temacie wykorzystanie silnika gry oraz rozbudowanego modelu fizycznego jest fakultatywne. 
+
+Ocena będzie uzależniona przede wszystkim od jakości rozwiązania i jego oryginalności. Znaczenie mają poprawność działania, uzasadnienie zastosowanej metody sztucznej inteligencji, jakość eksperymentów oraz sposób przedstawienia wyników. 
+Poprawnie wykonany wariant podstawowy pozwala uzyskać ocenę 3,0–3,5, maksymalnie 3,5. Wyższa ocena wymaga odpowiednio ambitnego rozszerzenia projektu: 
+
+Element projektu    Wpływ na ocenę  Warunek przyznania podwyższenia
+Zastosowanie fizyki +1,0    Poprawny i odpowiednio rozbudowany model fizyczny, który istotnie wpływa na rozgrywkę i działanie algorytmu. 
+Zastosowanie silnika gry    +1,0    Przemyślana integracja własnego rozwiązania z silnikiem, obejmująca działającą rozgrywkę, interakcję i prezentację rezultatów. 
+
+Podwyższenia nie są przyznawane automatycznie za samo użycie narzędzia. Pojedyncza kolizja, uruchomienie gotowej sceny czy odtworzenie przykładu z samouczka nie wystarczą. Rozszerzenie powinno wnosić istotną wartość do projektu, działać poprawnie i zostać omówione podczas prezentacji.

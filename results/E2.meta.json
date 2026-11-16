@@ -1,0 +1,40 @@
+{
+  "config": {
+    "name": "E2",
+    "title": "Turniej każdy z każdym (5 botów, 200 gier/parę), fizyka włączona (kopanie i odrzut, bez przeszkód), limit 200 ticków",
+    "kind": "matches",
+    "games": 200,
+    "games_for": {
+      "Planner vs MonteCarlo": 100,
+      "MonteCarlo vs Q-Learning (AI)": 100,
+      "Planner vs Q-Learning (AI)": 140
+    },
+    "max_ticks": 200,
+    "random_seeds": true,
+    "seed": 20000,
+    "physics": {
+      "kick": true,
+      "knockback": true,
+      "moving_obstacles": false
+    },
+    "variant": "z fizyką",
+    "round_robin": [
+      "random",
+      "randomsafe",
+      "planner",
+      {
+        "name": "montecarlo",
+        "params": {
+          "rollouts": 30,
+          "depth": 8
+        }
+      },
+      "qlearner"
+    ]
+  },
+  "scale": 1.0,
+  "tasks": 1740,
+  "workers": 4,
+  "seconds": 573.6,
+  "python": "3.12.3"
+}

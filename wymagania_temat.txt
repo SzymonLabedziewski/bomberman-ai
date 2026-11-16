@@ -1,0 +1,5 @@
+3. Bomberman — rywalizacja z przewidywaniem zagrożeń 
+Dwa boty poruszają się po niewielkim labiryncie, podkładają bomby i próbują wyeliminować przeciwnika. Kluczowe jest przewidywanie, które pola staną się niebezpieczne po upływie określonego czasu. 
+Przykładowa realizacja: jeden bot planuje bezpieczne ścieżki, uwzględniając czas wybuchów, a drugi wybiera działania na podstawie krótkich symulacji możliwego przebiegu gry. Wystarczy mała plansza i jeden rodzaj bomby. 
+Fakultatywna fizyka: przesuwanie bomb, odrzut po eksplozji i ruchome przeszkody. Podstawowa wersja może pozostać grą na siatce. 
+Ocena wyników: odsetek zwycięstw, liczba samobójczych ruchów i skuteczność ucieczki z zagrożonego obszaru. 

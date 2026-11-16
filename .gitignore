@@ -1,0 +1,26 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Godot (cache importu, generowany przy otwarciu projektu)
+godot/.godot/
+godot/export/
+
+# Surowe wyniki pośrednie (finalne CSV, wykresy i summary.json są commitowane)
+results/tmp/
+results/quick/
+results/replays/live_*
+results/benchmark_*.log
+
+# Pliki pomocnicze LaTeX/pandoc
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+
+# Systemowe
+.DS_Store
+Thumbs.db

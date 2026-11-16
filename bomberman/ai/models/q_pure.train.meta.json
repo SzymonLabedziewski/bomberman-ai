@@ -1,0 +1,65 @@
+{
+  "episodes": 15000,
+  "workers": 4,
+  "wall_seconds": 1301.36,
+  "peak_rss_mb": 18.87,
+  "cpu_seconds_est": 5205.45,
+  "energy_wh_est": 21.6894,
+  "assumed_cpu_watts": 15.0,
+  "pure_policy": true,
+  "safe_play_eval": false,
+  "opponent": "montecarlo",
+  "physics": false,
+  "physics_flags": {
+    "kick": false,
+    "knockback": false,
+    "moving_obstacles": false
+  },
+  "max_ticks": 200,
+  "alpha": 0.2,
+  "gamma": 0.97,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.08,
+  "n_states": 2461,
+  "train_wins": 537,
+  "train_draws": 2598,
+  "train_losses": 11865,
+  "train_self_kills": 10381,
+  "train_bombs": 156396,
+  "train_kicks": 0,
+  "final_eval_winrate": 0.8,
+  "final_eval_self_kill_rate": 0.0,
+  "final_eval_bomb_rate": 1.0,
+  "final_eval": {
+    "vs_randomsafe": {
+      "win_rate": 0.8,
+      "draw_rate": 0.2,
+      "loss_rate": 0.0,
+      "self_kill_rate": 0.0,
+      "bomb_rate": 1.0,
+      "kicks_per_game": 0.0
+    },
+    "vs_planner": {
+      "win_rate": 0.0,
+      "draw_rate": 0.9875,
+      "loss_rate": 0.0125,
+      "self_kill_rate": 0.0125,
+      "bomb_rate": 1.0,
+      "kicks_per_game": 0.0
+    },
+    "vs_montecarlo": {
+      "win_rate": 0.1375,
+      "draw_rate": 0.725,
+      "loss_rate": 0.1375,
+      "self_kill_rate": 0.15,
+      "bomb_rate": 1.0,
+      "kicks_per_game": 0.0
+    }
+  },
+  "final_eval_games": 80,
+  "table_path": "bomberman/ai/models/q_pure.json",
+  "meta_path": "bomberman/ai/models/q_pure.train.meta.json",
+  "seed": 42,
+  "resume": null,
+  "note": "Czysta polityka Q (safe_play=False). WR vs RandomSafe myli - patrz vs_planner i bomb_rate."
+}

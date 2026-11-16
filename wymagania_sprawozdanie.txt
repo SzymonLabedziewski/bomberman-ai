@@ -1,0 +1,9 @@
+Sprawozdanie i materiały projektowe 
+Zespół przygotowuje sprawozdanie o objętości 5–10 stron, przedstawiające: 
+opis zadania, jego cel i przyjęte założenia; 
+zastosowane metody oraz architekturę rozwiązania; 
+sposób przeprowadzenia eksperymentów i oceny rozwiązania; 
+uzyskane wyniki wraz z ich interpretacją; 
+wnioski, ograniczenia rozwiązania i możliwe kierunki jego rozwoju. 
+Sprawozdanie nie powinno zawierać całości kodu źródłowego. Należy przedstawić architekturę rozwiązania i wybrane fragmenty kodu, które pomagają wyjaśnić istotne lub szczególnie interesujące elementy implementacji. 
+Do sprawozdania należy dołączyć kod źródłowy albo odnośnik do repozytorium. Materiały powinny obejmować również instrukcję uruchomienia (od zera), informacje o wymaganych zależnościach, konfigurację oraz dane lub sposób ich pozyskania, tak aby możliwe było odtworzenie rozwiązania i przedstawionych wyników. 
